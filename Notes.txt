@@ -1,0 +1,55 @@
+API is a program we use in our program if we are ready  to write the code or not willing to use code written by someone else.
+
+
+
+Format to request and response is fixed 
+
+
+To request something we need to go to end-point of the API - a point where an API Receives questions
+
+
+
+https://www.visualcrossing.com/
+
+
+
+https://www.visualcrossing.com/weather-api
+
+install python from microsoft store
+
+
+
+pip install fastapi uvicorn
+
+
+from fastapi import FastAPI 
+
+app=FastAPI()
+
+@app.get("/predict")
+
+def product_model(age:int,sex:str):
+    if age<15 or sex=='F':
+        return {'survived':1}
+    else:
+        return {'survived':0}
+
+
+python3 -m uvicorn app:app --reload
+
+
+http://localhost:8000/docs#/default/product_model_predict_get
+
+
+pip install requests
+
+
+http://localhost:8000/docs#/default/product_model_predict_get
+
+
+
+
+
+
+
+
